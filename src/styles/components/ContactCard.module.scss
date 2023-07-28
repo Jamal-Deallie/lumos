@@ -1,0 +1,50 @@
+@use '../base/functions' as *;
+.card {
+  border: 2px solid var(--secondary-variant);
+  border-radius: 1vw;
+  aspect-ratio: 3/2;
+  span {
+    display: block;
+    font-family: var(--body-font);
+    font-size: mobile-vw(16px);
+    font-style: bold;
+  }
+
+  @include desktop {
+    span {
+      font-size: desktop-vw(24px);
+    }
+    p{
+      font-size: desktop-vw(16px);
+    }
+    .contact {
+      font-weight: 700;
+    }
+  }
+}
+.icon {
+  border: 1.75px var(--tertiary-variant) solid;
+  border-radius: 4px;
+  width: mobile-vw(32px);
+  height: mobile-vw(32px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    height: mobile-vw(24px);
+    width: mobile-vw(24px);
+  }
+  @include desktop {
+    width: desktop-vw(56px);
+    height: desktop-vw(56px);
+    svg {
+      height: desktop-vw(32px);
+      width: desktop-vw(32px);
+    }
+  }
+}
+
+.chat {
+  aspect-ratio: 48/38;
+}

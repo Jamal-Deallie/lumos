@@ -1,0 +1,43 @@
+@use '../base/functions' as *;
+
+.input {
+  --input-border: var(--primary-variant);
+  --input-focus-h: 245;
+  --input-focus-s: 100%;
+  --input-focus-l: 42%;
+  width: 100%;
+  color: var(--primary-variant);
+  padding: mobile-vw(8px) mobile-vw(4px);
+  font-size: mobile-vw(16px);
+  font-family: var(--body-font);
+  text-transform: capitalize;
+  border-bottom: 1.75px solid var(--input-border);
+  line-height: 1;
+  &::placeholder {
+    color: var(--primary-variant);
+  }
+  &:focus {
+    --input-border: hsl(
+      var(--input-focus-h),
+      var(--input-focus-s),
+      var(--input-focus-l)
+    );
+  }
+  &[disabled] {
+    --input-border: var(--tertiary-variant);
+    background-color: #eee;
+    cursor: not-allowed;
+  }
+  @include desktop {
+    padding: desktop-vw(8px) desktop-vw(4px);
+    font-size: desktop-vw(19px);
+  }
+}
+
+textarea.input {
+  height: mobile-vw(250px);
+
+  @include desktop {
+    height: desktop-vw(250px);
+  }
+}
