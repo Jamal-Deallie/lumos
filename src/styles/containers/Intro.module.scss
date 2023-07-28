@@ -1,0 +1,108 @@
+@use '../base/functions' as *;
+
+.intro {
+  position: relative;
+}
+
+.title-cont {
+  display: flex;
+  align-items: flex-end;
+  gap: mobile-vw(24px);
+  grid-column: 1/-1;
+  @include mobile {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  @include desktop {
+    gap: desktop-vw(32px);
+  }
+}
+
+.image {
+  position: relative;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  width: 100%;
+  grid-column: 1/-1;
+  border-radius: 1vw;
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 2;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(0, 0, 0, 0.25) 39%,
+      rgba(0, 0, 0, 0.4)
+    );
+  }
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+  @include desktop {
+    aspect-ratio: 3/4;
+    grid-column: 1/3;
+  }
+}
+
+.desc {
+  grid-column: 1/-1;
+  .summary {
+    p {
+      text-indent: mobile-vw(50px);
+      span {
+        font-style: italic;
+        font-weight: 600;
+      }
+    }
+  }
+
+  @include desktop {
+    grid-column: 4/-1;
+    .summary {
+      p {
+        text-indent: desktop-vw(200px);
+      }
+    }
+  }
+}
+
+.manifesto {
+  display: flex;
+  align-items: center;
+  gap: mobile-vw(4px);
+  .line {
+    height: 2.5px;
+    margin-top: desktop-vw(10px);
+    flex: 1;
+    background: #c6c5c5;
+  }
+  .caption {
+    width: mobile-vw(120px);
+  }
+
+  p {
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+  @include desktop {
+    margin-left: auto;
+    gap: desktop-vw(8px);
+    width: fit-content;
+    .line {
+      height: 1.5px;
+      margin-top: desktop-vw(10px);
+      width: desktop-vw(325px);
+      background: #c6c5c5;
+    }
+    .caption {
+      width: desktop-vw(150px);
+    }
+  }
+}

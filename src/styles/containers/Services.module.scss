@@ -1,0 +1,14 @@
+@use '../base/functions' as *;
+
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+    gap: mobile-vw(48px) mobile-vw(24px);
+  
+    @include desktop {
+      gap: desktop-vw(96px) desktop-vw(32px);
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    }
+  }
+  

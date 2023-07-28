@@ -1,0 +1,24 @@
+@use '../base/functions' as *;
+
+.service-card {
+  border: 2px solid var(--secondary-variant);
+  border-radius: 1vw;
+  aspect-ratio: 1;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .icon {
+    width: desktop-vw(60px);
+    svg {
+      display: block;
+    }
+  }
+
+  @include desktop {
+    .icon {
+      width: desktop-vw(60px);
+    }
+  }
+}

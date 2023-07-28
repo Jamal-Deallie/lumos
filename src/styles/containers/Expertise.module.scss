@@ -1,0 +1,57 @@
+@use '../base/functions' as *;
+
+.intro {
+  position: relative;
+}
+
+.title-cont {
+  display: flex;
+  align-items: flex-end;
+  gap: mobile-vw(24px);
+  grid-column: 1/-1;
+
+  @include desktop {
+    gap: desktop-vw(32px);
+  }
+}
+
+.desc {
+  grid-column: 1/-1;
+  p:nth-of-type(1) {
+    text-indent: mobile-vw(150px);
+  }
+
+  @include desktop {
+    grid-column: 4/-1;
+    p:nth-of-type(1) {
+      text-indent: desktop-vw(200px);
+      span {
+        font-style: italic;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.manifesto {
+  display: flex;
+  p {
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+  @include desktop {
+    grid-column: 4/12;
+    margin-left: auto;
+    gap: desktop-vw(8px);
+    width: fit-content;
+    .line {
+      height: 1.5px;
+      margin-top: desktop-vw(10px);
+      width: desktop-vw(325px);
+      background: #c6c5c5;
+    }
+    .caption {
+      width: desktop-vw(150px);
+    }
+  }
+}
