@@ -1,7 +1,7 @@
 import { IProjectProps } from '@/types';
 import clientPromise from '@/lib/mongodb';
 import styles from '@/styles/containers/Projects.module.scss';
-import Heading from '@/components/Heading';
+import { Heading } from '@/components/Heading';
 import cn from 'classnames';
 import ProjectCard from '@/components/ProjectCard';
 import Link from 'next/link';
@@ -39,10 +39,10 @@ export default function ProjectsPage({
     <section className='primary-bg py-lg-120 py-sm-64'>
       <Heading
         title='Projects'
-        desc='Explore our projects that breathe new life into urban landscapes,
+        desc='<p>Explore our projects that breathe new life into urban landscapes,
             outdoor installations, and residential designs that harmonize with
             nature. Witness how our solutions enrich workspaces, fostering
-            productivity and collaboration.'
+            productivity and collaboration.</p>'
       />
 
       <div className={cn(styles['projects'], 'grid-inner mt-lg-96 mt-sm-48')}>

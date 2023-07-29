@@ -38,11 +38,6 @@ export default function DesktopNavbar() {
           </LinkButton>
         </div>
       </div>
-      <div className={styles['tabs']}>
-        <div className={styles['tab']}></div>
-        <div className={styles['tab']}></div>
-        <div className={styles['tab']}></div>
-      </div>
     </nav>
   );
 }

@@ -9,7 +9,7 @@ export default function Hero() {
   const matches = useMediaQuery('(min-width: 850px)');
 
   return (
-    <div className={cn(styles['hero'], 'primary-bg pl-lg-40 pr-lg-40')}>
+    <div className={cn(styles['hero'], 'primary-bg pl-lg-24 pr-lg-24')}>
       <div className={styles['image']}>
         <Image
           className='hide-mobile'
@@ -49,9 +49,7 @@ export default function Hero() {
                 <div className={styles['line']}></div>
                 <p className='txt-md primary-clr'>
                   A modern architectural marvel, soaring above the city with
-                  breathtaking views, seamlessly blending luxury and
-                  sustainability, creating an urban haven for those who seek the
-                  epitome of refined living.
+                  breathtaking views.
                 </p>
               </div>
             </div>

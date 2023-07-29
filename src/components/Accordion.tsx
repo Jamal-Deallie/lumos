@@ -38,7 +38,7 @@ function AccordionComponent({ title, content }: AccordionProps) {
           showAccordion ? styles['content-show'] : styles['content-hide']
         )}>
         <div>
-          <p className='mt-lg-16 mt-sm-16 txt-md'>{content}</p>
+          <p className='my-lg-16 my-sm-16 txt-md'>{content}</p>
         </div>
       </div>
     </div>
